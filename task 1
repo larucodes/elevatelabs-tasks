@@ -1,7 +1,4 @@
-# Task 1 - Network Scanning using Nmap
 
-## Objective
-Perform host discovery and service enumeration using Nmap.
 
 ## Commands Used
 
@@ -71,7 +68,6 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 9.18 seconds
 
 
-## Outcome
-Successfully identified active hosts and enumerated running services.
+
 
 
