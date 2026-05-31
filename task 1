@@ -1,0 +1,77 @@
+# Task 1 - Network Scanning using Nmap
+
+## Objective
+Perform host discovery and service enumeration using Nmap.
+
+## Commands Used
+
+nmap -sn 192.168.29.0/24
+
+OUTPUT// 
+
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-31 09:45 +0530
+Nmap scan report for reliance.reliance (192.168.29.1)
+Host is up (0.0040s latency).
+MAC Address: A8:DA:0C:70:CF:D1 (Servercom (India) Private Limited)
+Nmap scan report for 192.168.29.26
+Host is up (0.11s latency).
+MAC Address: B4:C4:FC:AA:9D:EA (Xiaomi Communications)
+Nmap scan report for 192.168.29.126
+Host is up (4.3s latency).
+MAC Address: 50:FD:D5:66:B6:D3 (SJI Industry Company)
+Nmap scan report for 192.168.29.166
+Host is up (0.18s latency).
+MAC Address: 72:59:2D:97:05:AD (Unknown)
+Nmap scan report for 192.168.29.183
+Host is up (0.20s latency).
+MAC Address: 9C:B1:DC:68:8E:BC (Earda Technologies)
+Nmap scan report for 192.168.29.66
+Host is up.
+Nmap done: 256 IP addresses (6 hosts up) scanned in 7.05 seconds   //
+
+nmap -Pn -sV 192.168.29.66
+
+OUTPUT //
+
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-31 09:46 +0530
+Nmap scan report for 192.168.29.66
+Host is up (0.0016s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+3306/tcp open  mysql         MySQL (unauthorized)
+8090/tcp open  tcpwrapped
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.22 seconds //
+
+## Deliverables
+- Scan results
+- Screenshots
+- Analysis of open ports
+
+
+C:\Users\laran>nmap -Pn -sV 192.168.29.66 -oN scan.txt
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-31 09:46 +0530
+Nmap scan report for 192.168.29.66
+Host is up (0.0016s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+3306/tcp open  mysql         MySQL (unauthorized)
+8090/tcp open  tcpwrapped
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.18 seconds
+
+
+## Outcome
+Successfully identified active hosts and enumerated running services.
+
+
